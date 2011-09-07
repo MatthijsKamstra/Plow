@@ -53,6 +53,12 @@ package nl.base42.plow.data {
 			if (filename != file.name) {
 				// move folder
 				var folder : String = file.nativePath.substr(0, file.nativePath.length - file.name.length);
+				
+				// [mck] : split the package to folders
+				if (filename.indexOf("/") != -1) {
+					filename = filename.split("/").join(File.separator);
+				}
+				
 				var newfile : File = new File(folder + filename);
 				file.moveTo(newfile);
 				debug("updateFolderName: update folder name");

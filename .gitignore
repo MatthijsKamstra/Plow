@@ -3,3 +3,5 @@ bin/*
 !bin/plow-app.xml
 !bin/*.png
 !bin/*.xml
+template-example/FDTBasicTemplate/src/.DS_Store
+.DS_Store
